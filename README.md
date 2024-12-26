@@ -6,7 +6,7 @@ It's a Rust library that compiles to Wasm and exports a function
 
 This function establishes a web socket connection to some "endpoint" and send the text message, receive a message, and return its content.
 
-Check `/client/README.md` `Running test` section on how to run relevant tests.
+Check [Running test](https://github.com/sitetester/wasm-to-websocket/tree/main/client#running-test) on how to run relevant tests.
 
 ### Why such workspace setup ? 
 - It has conflict with tokio `rt-multi-thread` feature, which is being used in `/server` for running Websocket server
