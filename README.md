@@ -4,7 +4,7 @@ Check relevant `README.md` files in /client & /server
 It's a Rust library that compiles to Wasm and exports a function 
 `wsPing(endpoint: string, message: string): Promise<string>` (Typescript syntax)
 
-It establishes a web socket connection to some "endpoint" and send the text message, receive a message, and return its content.
+This function establishes a web socket connection to some "endpoint" and send the text message, receive a message, and return its content.
 
 Check `/client/README.md` `Running test` section on how to run relevant tests.
 
