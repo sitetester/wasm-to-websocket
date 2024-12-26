@@ -7,10 +7,11 @@ First check `../client/README.md`
 [INFO]: 📦   Your wasm pkg is ready to publish at /Users/x/wasm-to-websocket/client/pkg
 (`/Users/x/wasm-to-websocket` will show your path)
 
-### Run Server
-`cd web` (make sure to be inside `web` directory)
-`npm install` (as we need `express` js framework)
-`node server.js` (this should print )
+### Run Web Server
+We need to run a web server to load the `index.html` file from `./static` path
+- `cd web` (make sure to be inside `web` directory)
+- `npm install` (as we need `express` js framework)
+- `node server.js` (this should print)
 
 Serving current directory: /Users/x/wasm-to-websocket/client/web/static  
 Serving pkg directory: /Users/x/wasm-to-websocket/client/pkg  
