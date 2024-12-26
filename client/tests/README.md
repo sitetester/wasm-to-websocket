@@ -3,8 +3,8 @@ First check `../client/README.md`
 
 
 ### Compile for Node.js
-`cd ../` (navigate to `client` directory)
-` wasm-pack build --target nodejs;` (this should print)  
+- `cd ../` (navigate to `client` directory)
+- ` wasm-pack build --target nodejs;` (this should print)  
 [INFO]: 📦   Your wasm pkg is ready to publish at /Users/x/wasm-to-websocket/client/pkg
 (`/Users/x/wasm-to-websocket` will show your path)
 
