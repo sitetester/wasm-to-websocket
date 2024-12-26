@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WebSocket WASM Test</title>
+    <style>
+        body { font-family: Arial,serif; margin: 20px; }
+        input { margin-right: 10px; }
+    </style>
+</head>
+<body>
+<h2>WebSocket WASM Test</h2>
+<div>
+    <label for="messageInput">Enter some text: </label>
+    <input id="messageInput" value="Hello from WebSocket!">
+    <button onclick="sendMessage()">Send</button>
+</div>
+<div id="result">(Server response will be shown here)</div>
+
+<script type="module">
+    // Import the WASM module and required functions
+    const module = await import('../../pkg/wasm_client.js');
+    const { default: init, ws_ping } = module;
+    // Initialize the WASM module
+    await init();
+
+    window.sendMessage = async () => {
+        const input = document.getElementById('messageInput');
+        const message = input.value;
+
+        try {
+            // Call the WASM `ws_ping` function and update the `result` div with the response
+            document.getElementById('result').textContent = await ws_ping('ws://127.0.0.1:8081', message);
+        } catch (error) {
+            // Display error otherwise
+            document.getElementById('result').textContent = 'Error: ' + error;
+        }
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+[package]
+name = "websocket-server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.42.0", features = ["rt", "rt-multi-thread", "macros"] }
+futures-util = "0.3.31"
+tokio-tungstenite = "0.26.0"
+chrono = "0.4.39"

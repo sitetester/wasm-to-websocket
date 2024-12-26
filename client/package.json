@@ -1,0 +1,25 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "WebSocket WASM client implementation",
+  "main": "tests/ws_ping_test.ts",
+  "scripts": {
+    "prebuild": "echo 'About to build'",
+    "build": "wasm-pack build --target nodejs",
+    "postbuild": "echo 'Build completed'",
+    "prestart": "npm run build",
+    "start": "ts-node tests/ws_ping_test.ts"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/ws": "^8.5.13",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
