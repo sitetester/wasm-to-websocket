@@ -9,7 +9,6 @@ First check `../client/README.md`
 (`/Users/x/wasm-to-websocket` will show your path)
 
 ### Run test
-- `npm install` (we need `ws` package in node.js environment)
 - `npx ts-node ws_ping_test.ts` (it should print the following in CLI along with debug logs) 
 
 Sending: Hello from TypeScript  

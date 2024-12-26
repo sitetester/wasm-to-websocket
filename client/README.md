@@ -2,7 +2,7 @@
 `cd client` (make sure to be inside `/client` directory)
 
 **Install dependencies**
-- `npm install ws`
+- `npm install ws` (we need `ws` package in node.js environment)
 - `npm install -D typescript ts-node @types/node @types/ws` (Development dependencies)
 
 **Build WASM package**
