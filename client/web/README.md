@@ -20,3 +20,4 @@ Server running at http://localhost:3000
 Click the `Send` button to check the request/response flow. It should display Websocket Server (`server/src/main.rs`) response. Also open the Browser `Console` tab to see relevant logs
 
 ![Missing Web UI test screenshot](./static/wasm_web_ui.png "Web UI test screenshot")
+![Missing Server CLI screenshot](./static/server_cli.png "Server CLI screenshot")
