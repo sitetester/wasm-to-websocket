@@ -7,7 +7,7 @@
 
 **Build WASM package**
 - `cargo install wasm-pack` (if not already installed)
-- `wasm-pack build --target nodejs` 
+- `wasm-pack build --target nodejs` (or `--target web` depending on whether it's node.js or web UI environment)
 
 ### Running test
 First run the server (check `server/README.md`)
