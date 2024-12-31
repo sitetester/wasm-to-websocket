@@ -6,7 +6,7 @@ use tokio_tungstenite::tungstenite::Message;
 
 /// Sets up a WebSocket server that:
 /// - Binds to a local address (127.0.0.1:8081)
-/// - Accepts incoming connections & handle each in a separate `tokio::spawn`
+/// - Accepts incoming connections & handle each concurrently
 #[tokio::main]
 async fn main() {
     let addr = "127.0.0.1:8081";
