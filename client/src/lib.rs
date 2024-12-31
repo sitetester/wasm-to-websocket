@@ -6,7 +6,7 @@ use wasm_bindgen_futures::JsFuture;
 use web_sys::{ErrorEvent, MessageEvent, WebSocket};
 
 /// It will be called automatically when the WASM module is instantiated
-/// * `init_logging` function name can be anything
+/// `init_logging` function name can be anything
 #[wasm_bindgen(start)]
 pub fn init_logging() {
     // Initialize logging for JavaScript environments (browser or Node.js)
@@ -73,9 +73,9 @@ pub async fn ws_ping(endpoint: String, message: String) -> Result<String, JsValu
 /// * `reject_cb` - JavaScript function to call if sending fails
 ///
 /// # Returns
-/// * `Closure<dyn FnMut()>` - Closure that handles WebSocket open event and
-///   - Sends the provided message when connection is established
-///   - Calls `reject_cb` if sending the message fails
+/// `Closure<dyn FnMut()>` - Closure that handles WebSocket open event and
+///  - Sends the provided message when connection is established
+///  - Calls `reject_cb` if sending the message fails
 fn create_onopen_handler(
     ws: Rc<WebSocket>,
     message: Rc<String>,
@@ -100,9 +100,9 @@ fn create_onopen_handler(
 /// * `reject_fn` - JavaScript function to call when an error occurs
 ///
 /// # Returns
-/// * `Closure<dyn FnMut(MessageEvent)>` - A Closure that handles incoming WebSocket messages and
-///   - Calls `resolve_fn` with the message data
-///   - Calls `reject_fn` if message processing fails
+/// `Closure<dyn FnMut(MessageEvent)>` - A Closure that handles incoming WebSocket messages and
+///  - Calls `resolve_fn` with the message data
+///  - Calls `reject_fn` if message processing fails
 fn create_onmessage_handler(
     resolve_fn: js_sys::Function,
     reject_fn: Rc<js_sys::Function>,
@@ -132,7 +132,7 @@ fn create_onmessage_handler(
 /// * `reject_fn` - JavaScript function to call when an error occurs
 ///
 /// # Returns
-/// * `Closure<dyn FnMut(ErrorEvent)>` - A Closure that handles WebSocket error events and
+/// `Closure<dyn FnMut(ErrorEvent)>` - A Closure that handles WebSocket error events and
 ///  Calls `reject_fn` with the error event to reject the Promise
 fn create_onerror_handler(reject_fn: Rc<js_sys::Function>) -> Closure<dyn FnMut(ErrorEvent)> {
     // Create a closure that will be called if WebSocket encounters an error
