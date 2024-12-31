@@ -39,7 +39,7 @@ async fn handle_connection(stream: TcpStream, addr: std::net::SocketAddr) {
         }
     };
 
-    // Split WebSocket stream into writer and reader parts
+    // Split WebSocket stream into writer and reader
     // This allows us to send and receive messages independently
     let (mut write, mut read) = ws_stream.split();
 
