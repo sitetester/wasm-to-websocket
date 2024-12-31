@@ -5,7 +5,7 @@ members = [
 ]
 
 # Without resolver = "2":
-# - Features might get unified across targets ((WASM vs Native), e.g. js feature needed in WASM target
-# - Could cause compilation issues (e.g., js feature needed in WASM target)
+# - Features might get unified across targets (WASM vs Native), e.g. js feature needed in WASM target
+# - Could cause compilation issues
 resolver = "2" # New resolver (2021 edition and later)
 
