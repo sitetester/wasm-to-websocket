@@ -133,7 +133,7 @@ fn create_onmessage_handler(
 ///
 /// # Returns
 /// `Closure<dyn FnMut(ErrorEvent)>` - A Closure that handles WebSocket error events and
-///  Calls `reject_fn` with the error event to reject the Promise
+///  calls `reject_fn` with the error event to reject the Promise
 fn create_onerror_handler(reject_fn: Rc<js_sys::Function>) -> Closure<dyn FnMut(ErrorEvent)> {
     // Create a closure that will be called if WebSocket encounters an error
     Closure::wrap(Box::new(move |e: ErrorEvent| {
